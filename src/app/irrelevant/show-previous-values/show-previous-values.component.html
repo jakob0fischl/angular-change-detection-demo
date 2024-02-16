@@ -1,0 +1,5 @@
+<div class="bg-blue-300 p-2 flex gap-0.5 rounded-xl">
+  @for (value of previousValues(); track value; let last = $last) {
+    <p>{{ JSON.stringify(value) }} {{last ? '' : ','}}</p>
+  }
+</div>

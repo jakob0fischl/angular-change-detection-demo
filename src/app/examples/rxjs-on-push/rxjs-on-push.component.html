@@ -1,0 +1,21 @@
+
+<div class="border-2 rounded-xl border-red-600 p-4 flex gap-2 flex-col">
+  <app-increment-button [value]="(value1$ | async) ?? 0" (valueChange)="update1($event)"/>
+  <app-increment-button [value]="(value2$ | async) ?? 0" (valueChange)="update2($event)"/>
+  <app-switch
+    label="Show value 2"
+    [value]="(showValue2$ | async) ?? false"
+    (valueChange)="showValue2$.next($event)"
+  />
+
+  Value 1 or 2: <app-on-push-subcomponent [data]="(value$ | async) ?? 0"/>
+  Value 1: <app-on-push-subcomponent [data]="(value1$ | async) ?? 0"/>
+  Value 2: <app-on-push-subcomponent [data]="(value2$ | async) ?? 0"/>
+
+  <div class="flex gap-1 items-center">
+    Delayed value 1, previous values: <app-show-previous-values [value]="delayedValue$ | async"/>
+  </div>
+
+  <app-change-detection-counter/>
+</div>
+
