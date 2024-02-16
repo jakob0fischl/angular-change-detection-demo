@@ -1,0 +1,9 @@
+<nav class="bg-gray-800 text-white p-4">
+  <ul class="flex space-x-8">
+    @for (link of navLinks; track link.title) {
+      <li>
+        <a [routerLink]="link.path" class="hover:text-gray-300">{{ link.title }}</a>
+      </li>
+    }
+  </ul>
+</nav>
