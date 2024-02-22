@@ -7,6 +7,7 @@ import {
   NormalPropertyOnPushAsyncComponent,
 } from './examples/normal-property-on-push-async/normal-property-on-push-async.component';
 import {SomeNiceSignalThingsComponent} from './examples/some-nice-signal-things/some-nice-signal-things.component';
+import {SignalPitfallsComponent} from './examples/signal-pitfalls/signal-pitfalls.component';
 
 export const routes: Routes = [
   {
@@ -38,5 +39,10 @@ export const routes: Routes = [
     title: 'some-nice-signal-things',
     path: 'some-nice-signal-things',
     component: SomeNiceSignalThingsComponent,
+  },
+  {
+    title: 'signal-pitfalls',
+    path: 'signal-pitfalls',
+    component: SignalPitfallsComponent,
   }
 ];
